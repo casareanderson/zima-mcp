@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.casareanderson/zima-mcp",
+  "title": "Zima MCP",
+  "description": "Check load, containers, logs and disks on a ZimaBlade or Docker host over SSH, restart allowlisted",
+  "repository": {
+    "url": "https://github.com/casareanderson/zima-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "zima-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {"name": "ZIMA_HOST", "description": "Hostname or IP of the box to manage", "isRequired": true, "format": "string"},
+        {"name": "ZIMA_USER", "description": "SSH user that can run docker without sudo", "isRequired": true, "format": "string"},
+        {"name": "ZIMA_SSH_PORT", "description": "SSH port", "isRequired": false, "format": "number", "default": "22"},
+        {"name": "ZIMA_SSH_KEY", "description": "Path to the SSH private key (default: your SSH agent/config)", "isRequired": false, "format": "filepath"},
+        {"name": "ZIMA_SSH_TIMEOUT", "description": "Seconds before an SSH command gives up", "isRequired": false, "format": "number", "default": "20"},
+        {"name": "ZIMA_RESTART_ALLOWLIST", "description": "Comma-separated containers the agent may restart; empty = restarts refused", "isRequired": false, "format": "string"}
+      ]
+    }
+  ]
+}

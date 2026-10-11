@@ -2,6 +2,8 @@
 
 An MCP server that lets your AI assistant check on a ZimaBlade (or any Docker box) over plain SSH, and restart the containers you allow, with nothing installed on the box.
 
+<!-- mcp-name: io.github.casareanderson/zima-mcp -->
+
 ![zima-mcp running against a real ZimaBlade: tool list, load, per-container stats, and a refused restart](docs/zima-mcp-demo.png)
 
 *Real output from a ZimaBlade running ZimaOS, captured 11 Oct 2026. The stats table is trimmed to the Immich and Homepage containers.*
