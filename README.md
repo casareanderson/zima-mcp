@@ -8,7 +8,7 @@ An MCP server that lets your AI assistant check on a ZimaBlade (or any Docker bo
 
 *Real output from a ZimaBlade running ZimaOS, captured 11 Oct 2026. The stats table is trimmed to the Immich and Homepage containers.*
 
-![MIT licence](https://img.shields.io/badge/licence-MIT-blue) ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
+![MIT licence](https://img.shields.io/badge/licence-MIT-blue) ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue) [![Buy Me a Coffee](https://raw.githubusercontent.com/casareanderson/.github/main/badges/bmc-yellow.svg)](https://buymeacoffee.com/iamc_tech)
 
 ## Contents
 
