@@ -1,0 +1,22 @@
+name: setup-check
+# Proves docs/SETUP.md still works: runs scripts/setup-check.sh on a fresh runner.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"
+  push:
+    paths:
+      - "docs/SETUP.md"
+      - "scripts/setup-check.sh"
+      - "zima_mcp/**"
+      - "pyproject.toml"
+      - ".github/workflows/setup-check.yml"
+jobs:
+  setup-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: bash scripts/setup-check.sh
